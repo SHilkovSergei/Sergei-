@@ -1,0 +1,8 @@
+int min_array(const int* _f, const int* _l){
+    int v;
+    if((_f + 1) < _l){
+        v = min_array(_f + 1, _l);
+        return (*_f < v) ? *_f : v;
+    }
+    return *_f;
+}
